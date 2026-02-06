@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simple Notes App - Your personal note-taking companion">
+    <title>Simple Notes App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            color: white;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .tagline {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .content {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            margin: 40px auto;
+            max-width: 900px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .feature {
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature h3 {
+            color: #764ba2;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .feature p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .delete-section {
+            background: #fff5f5;
+            border: 2px solid #feb2b2;
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+        .delete-section h3 {
+            color: #c53030;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .delete-section p {
+            color: #555;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .delete-instructions {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .delete-instructions ol {
+            margin-left: 20px;
+            color: #555;
+        }
+
+        .delete-instructions li {
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .tagline {
+                font-size: 1rem;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 Simple Notes App</h1>
+            <p class="tagline">Your personal note-taking companion</p>
+        </header>
+
+        <div class="content">
+            <section class="section">
+                <h2>About Simple Notes</h2>
+                <p>Simple Notes is a lightweight, intuitive note-taking application designed to help you capture and organize your thoughts effortlessly. Whether you're jotting down quick reminders, saving important information, or organizing your daily tasks, Simple Notes makes it simple and straightforward.</p>
+            </section>
+
+            <section class="section">
+                <h2>Features</h2>
+                <div class="features">
+                    <div class="feature">
+                        <h3>📱 Easy to Use</h3>
+                        <p>Clean and intuitive interface that gets out of your way and lets you focus on your notes.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>⚡ Quick Access</h3>
+                        <p>Create, edit, and access your notes instantly whenever inspiration strikes.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>🔒 Secure</h3>
+                        <p>Your notes are stored securely and privately on your device.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>🎨 Organized</h3>
+                        <p>Keep your notes organized and easily searchable for quick retrieval.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Account Deletion</h2>
+                <div class="delete-section">
+                    <h3>⚠️ How to Delete Your Account</h3>
+                    <p>If you wish to delete your account and all associated data, please follow these instructions:</p>
+                    
+                    <div class="delete-instructions">
+                        <ol>
+                            <li><strong>Open the Simple Notes App</strong> on your device</li>
+                            <li>Navigate to <strong>Settings</strong> or your <strong>Profile</strong> section</li>
+                            <li>Look for the <strong>Account</strong> or <strong>Privacy</strong> options</li>
+                            <li>Select <strong>Delete Account</strong></li>
+                            <li>Confirm your decision when prompted</li>
+                        </ol>
+                        <p style="margin-top: 15px; color: #c53030; font-weight: 600;">
+                            ⚠️ Note: Account deletion is permanent and cannot be undone. All your notes and data will be permanently deleted.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Get Started</h2>
+                <p>Download Simple Notes today and start organizing your thoughts with ease!</p>
+                <a href="https://github.com/davidnwaneri/simple_notes_app" class="cta-button" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            </section>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Simple Notes App. <a href="https://github.com/davidnwaneri/simple_notes_app" target="_blank" rel="noopener noreferrer">GitHub Repository</a></p>
+        </footer>
+    </div>
+</body>
+</html>
